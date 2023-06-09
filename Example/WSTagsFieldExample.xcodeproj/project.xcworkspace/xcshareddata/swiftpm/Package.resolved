@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "wstagsfield",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:bozek-lu/WSTagsField.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "726991257726d13f79c68d3199f3a0ef6f5385d2"
+      }
+    }
+  ],
+  "version" : 2
+}

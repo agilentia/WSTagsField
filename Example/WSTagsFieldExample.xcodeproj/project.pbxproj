@@ -3,43 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		898A4DF42A33555500A6FD6A /* CustomWSTagsField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A4DF12A33555500A6FD6A /* CustomWSTagsField.swift */; };
+		898A4DF52A33555500A6FD6A /* CustomWSTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A4DF32A33555500A6FD6A /* CustomWSTagView.swift */; };
+		898A4DFB2A33580200A6FD6A /* WSTagsField in Frameworks */ = {isa = PBXBuildFile; productRef = 898A4DFA2A33580200A6FD6A /* WSTagsField */; };
 		D73307521EB3B8DE00FD29B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73307511EB3B8DE00FD29B4 /* TableViewController.swift */; };
 		D7F33FF61D2A7378003F0082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F33FF51D2A7378003F0082 /* AppDelegate.swift */; };
 		D7F33FF81D2A7378003F0082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F33FF71D2A7378003F0082 /* ViewController.swift */; };
 		D7F33FFB1D2A7378003F0082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F33FF91D2A7378003F0082 /* Main.storyboard */; };
 		D7F33FFD1D2A7378003F0082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F33FFC1D2A7378003F0082 /* Assets.xcassets */; };
 		D7F340001D2A7378003F0082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F33FFE1D2A7378003F0082 /* LaunchScreen.storyboard */; };
-		D7F340101D2A7416003F0082 /* WSTagsField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F3400D1D2A7407003F0082 /* WSTagsField.framework */; };
-		D7F340111D2A7416003F0082 /* WSTagsField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F3400D1D2A7407003F0082 /* WSTagsField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D7F3400C1D2A7407003F0082 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7F340071D2A7407003F0082 /* WSTagsField.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D78C9FEF1D2A6AFD004F4BFF;
-			remoteInfo = WSTagsField;
-		};
-		D7F3400E1D2A7407003F0082 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7F340071D2A7407003F0082 /* WSTagsField.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D78C9FF91D2A6AFD004F4BFF;
-			remoteInfo = WSTagsFieldTests;
-		};
-		D7F340121D2A7416003F0082 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7F340071D2A7407003F0082 /* WSTagsField.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D78C9FEE1D2A6AFD004F4BFF;
-			remoteInfo = WSTagsField;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D7F340141D2A7416003F0082 /* Embed Frameworks */ = {
@@ -48,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D7F340111D2A7416003F0082 /* WSTagsField.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		898A4DF12A33555500A6FD6A /* CustomWSTagsField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWSTagsField.swift; sourceTree = "<group>"; };
+		898A4DF32A33555500A6FD6A /* CustomWSTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWSTagView.swift; sourceTree = "<group>"; };
 		D73307511EB3B8DE00FD29B4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D7F33FF21D2A7378003F0082 /* WSTagsFieldExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSTagsFieldExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F33FF51D2A7378003F0082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +42,6 @@
 		D7F33FFC1D2A7378003F0082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7F33FFF1D2A7378003F0082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7F340011D2A7378003F0082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7F340071D2A7407003F0082 /* WSTagsField.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WSTagsField.xcodeproj; path = ../WSTagsField.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F340101D2A7416003F0082 /* WSTagsField.framework in Frameworks */,
+				898A4DFB2A33580200A6FD6A /* WSTagsField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +61,6 @@
 			children = (
 				D7F33FF41D2A7378003F0082 /* WSTagsFieldExample */,
 				D7F33FF31D2A7378003F0082 /* Products */,
-				D7F340071D2A7407003F0082 /* WSTagsField.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,21 +78,14 @@
 				D7F33FF51D2A7378003F0082 /* AppDelegate.swift */,
 				D7F33FF71D2A7378003F0082 /* ViewController.swift */,
 				D73307511EB3B8DE00FD29B4 /* TableViewController.swift */,
+				898A4DF12A33555500A6FD6A /* CustomWSTagsField.swift */,
+				898A4DF32A33555500A6FD6A /* CustomWSTagView.swift */,
 				D7F33FF91D2A7378003F0082 /* Main.storyboard */,
 				D7F33FFC1D2A7378003F0082 /* Assets.xcassets */,
 				D7F33FFE1D2A7378003F0082 /* LaunchScreen.storyboard */,
 				D7F340011D2A7378003F0082 /* Info.plist */,
 			);
 			path = WSTagsFieldExample;
-			sourceTree = "<group>";
-		};
-		D7F340081D2A7407003F0082 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D7F3400D1D2A7407003F0082 /* WSTagsField.framework */,
-				D7F3400F1D2A7407003F0082 /* WSTagsFieldTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +104,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				D7F340131D2A7416003F0082 /* PBXTargetDependency */,
 			);
 			name = WSTagsFieldExample;
+			packageProductDependencies = (
+				898A4DFA2A33580200A6FD6A /* WSTagsField */,
+			);
 			productName = WSTagsFieldExample;
 			productReference = D7F33FF21D2A7378003F0082 /* WSTagsFieldExample.app */;
 			productType = "com.apple.product-type.application";
@@ -167,37 +138,17 @@
 				Base,
 			);
 			mainGroup = D7F33FE91D2A7378003F0082;
+			packageReferences = (
+				898A4DF92A33580200A6FD6A /* XCRemoteSwiftPackageReference "WSTagsField" */,
+			);
 			productRefGroup = D7F33FF31D2A7378003F0082 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D7F340081D2A7407003F0082 /* Products */;
-					ProjectRef = D7F340071D2A7407003F0082 /* WSTagsField.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D7F33FF11D2A7378003F0082 /* WSTagsFieldExample */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D7F3400D1D2A7407003F0082 /* WSTagsField.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WSTagsField.framework;
-			remoteRef = D7F3400C1D2A7407003F0082 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D7F3400F1D2A7407003F0082 /* WSTagsFieldTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = WSTagsFieldTests.xctest;
-			remoteRef = D7F3400E1D2A7407003F0082 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D7F33FF01D2A7378003F0082 /* Resources */ = {
@@ -236,19 +187,13 @@
 			files = (
 				D7F33FF81D2A7378003F0082 /* ViewController.swift in Sources */,
 				D73307521EB3B8DE00FD29B4 /* TableViewController.swift in Sources */,
+				898A4DF42A33555500A6FD6A /* CustomWSTagsField.swift in Sources */,
 				D7F33FF61D2A7378003F0082 /* AppDelegate.swift in Sources */,
+				898A4DF52A33555500A6FD6A /* CustomWSTagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D7F340131D2A7416003F0082 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WSTagsField;
-			targetProxy = D7F340121D2A7416003F0082 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D7F33FF91D2A7378003F0082 /* Main.storyboard */ = {
@@ -372,7 +317,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -384,7 +330,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WSTagsFieldExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.whitesmith.WSTagsFieldExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -397,7 +347,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WSTagsFieldExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.whitesmith.WSTagsFieldExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -426,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		898A4DF92A33580200A6FD6A /* XCRemoteSwiftPackageReference "WSTagsField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:bozek-lu/WSTagsField.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		898A4DFA2A33580200A6FD6A /* WSTagsField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 898A4DF92A33580200A6FD6A /* XCRemoteSwiftPackageReference "WSTagsField" */;
+			productName = WSTagsField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7F33FEA1D2A7378003F0082 /* Project object */;
 }

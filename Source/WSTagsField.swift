@@ -27,11 +27,24 @@ open class WSTagsField: UIScrollView {
 
     /// Dedicated text field delegate.
     open weak var textDelegate: UITextFieldDelegate?
+    
+    /// Class to be used as a tag view.
+    open var tagViewClass: WSTagView.Type { WSTagView.self }
+    
+    /// Closure called after tag view creation, offereing a chance of customization upon creation.
+    open var configureTagView: ((WSTagView) -> Void)?
 
     /// Background color for tag view in normal (non-selected) state.
     @IBInspectable open override var tintColor: UIColor! {
         didSet {
             tagViews.forEach { $0.tintColor = self.tintColor }
+        }
+    }
+    
+    // Background color for tag view in normal (non-selected) state, as an alternative to `.tintColor` which changes caret color. Fallback to `.tintColor` if unspecified.
+    open var tagColor: UIColor? {
+        didSet {
+            tagViews.forEach { $0.tintColor = self.tagColor }
         }
     }
 
@@ -173,6 +186,12 @@ open class WSTagsField: UIScrollView {
         didSet {
             unselectAllTagViewsAnimated()
             textField.isEnabled = !readOnly
+            repositionViews()
+        }
+    }
+    
+    open var forceTextFieldOnNewLine: Bool = false {
+        didSet {
             repositionViews()
         }
     }
@@ -391,9 +410,9 @@ open class WSTagsField: UIScrollView {
 
         self.tags.append(tag)
 
-        let tagView = WSTagView(tag: tag)
+        let tagView = tagViewClass.init(tag: tag)
         tagView.font = self.font
-        tagView.tintColor = self.tintColor
+        tagView.tintColor = self.tagColor ?? self.tintColor
         tagView.textColor = self.textColor
         tagView.selectedColor = self.selectedColor
         tagView.selectedTextColor = self.selectedTextColor
@@ -403,6 +422,8 @@ open class WSTagsField: UIScrollView {
         tagView.borderColor = self.borderColor
         tagView.keyboardAppearance = self.keyboardAppearance
         tagView.layoutMargins = self.layoutMargins
+
+        configureTagView?(tagView)
 
         tagView.onDidRequestSelection = { [weak self] tagView in
             self?.selectTagView(tagView, animated: true)
@@ -712,7 +733,7 @@ extension WSTagsField {
             var textFieldRect = CGRect.zero
             textFieldRect.size.height = Constants.STANDARD_ROW_HEIGHT
 
-            if availableWidthForTextField < Constants.MINIMUM_TEXTFIELD_WIDTH {
+            if forceTextFieldOnNewLine || availableWidthForTextField < Constants.MINIMUM_TEXTFIELD_WIDTH {
                 // If in the future we add more UI elements below the tags,
                 // isOnFirstLine will be useful, and this calculation is important.
                 // So leaving it set here, and marking the warning to ignore it
